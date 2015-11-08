@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Auth
 from django.http import HttpResponse
 from rest_framework import generics
-from serializer import AuthSerializer
+from serializers import AuthSerializer
 
 # Create your views here.
 def view(request):
