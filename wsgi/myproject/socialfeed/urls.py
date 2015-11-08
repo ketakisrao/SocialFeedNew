@@ -5,7 +5,7 @@ from socialfeed import views
 from .models import Auth
 urlpatterns = [
 	url(r'^$', views.view, name='view'),
-	url(r'api/$', views.AuthList.asView()),
+	url(r'api/$', views.AuthList.as_View()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
