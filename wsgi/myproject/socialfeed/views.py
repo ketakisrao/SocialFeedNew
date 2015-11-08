@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import Auth
 from django.http import HttpResponse
+from rest_framework import generics
+from serializer import AuthSerializer
+
 # Create your views here.
 def view(request):
 	latest = Auth.objects.all()
@@ -18,3 +21,7 @@ def getTweets():
                 tweets.append("No Status!")
 
         return tweets
+
+class AuthList(generics.ListCreateAPIView):
+	queryset = Auth.objects.all()
+	serializer_class = AuthSerializer
