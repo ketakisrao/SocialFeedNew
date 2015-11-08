@@ -2,3 +2,15 @@
 {% for i in latest %}
 <li>{{ i.username}} </li>
 {% endfor %}
+
+<H1>Tweets</H1>
+
+{% for t in tweets %}
+<li> {{t}}</li>
+{% endfor %}
+
+<h1>Followers</h1>
+{% for f in followers %}
+<li> {{f}} </li>
+
+{% endfor %}
