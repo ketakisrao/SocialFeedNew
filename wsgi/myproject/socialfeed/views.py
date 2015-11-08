@@ -25,3 +25,8 @@ def getTweets():
 class AuthList(generics.ListCreateAPIView):
 	queryset = Auth.objects.all()
 	serializer_class = AuthSerializer
+
+
+class AuthDetail(generics.RetrieveUpdateDestroyAPIView):
+        queryset = Auth.objects.all()
+        serializer_class = AuthSerializer
