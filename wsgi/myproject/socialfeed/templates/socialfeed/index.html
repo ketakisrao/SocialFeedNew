@@ -1,3 +1,8 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'social/style.css' %}" />
+<body>
+
+
 <H1>List</H1>
 {% for i in latest %}
 <li>{{ i.username}} </li>
